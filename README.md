@@ -17,16 +17,37 @@ Before using the custom card and dashboard, ensure that you have the following H
 
 ## Installation
 
+### 1. Custom Card Installation
+
+1. **Install Required Integrations:**
+   - Use HACS in Home Assistant to install the required frontend integrations mentioned above.
+
+2. **Copy the Custom Card YAML:**
+   - Download or copy the YAML file for the custom card from this repository.
+
+3. **Add the Custom Card to Your Dashboard:**
+   - Open Home Assistant and navigate to `Configuration` → `Lovelace Dashboards`.
+   - Choose the dashboard where you want to add the custom card.
+   - Select `Edit Dashboard`.
+   - Click on the "+" button to add a new card and select the "Manual" option.
+   - Paste the content of the custom card YAML file into the editor.
+   - Save the changes.
+
+4. **Configure the Card:**
+   - After adding the card, you can customize it to fit your needs within the Lovelace UI by editing the card options.
+
+### 2. Custom Dashboard Installation
+
 1. **Install Required Integrations:**
    - Use HACS in Home Assistant to install the required frontend integrations and themes mentioned above.
 
-2. **Copy YAML Files:**
-   - Download or copy the YAML files from this repository and paste them into your Home Assistant's Lovelace configuration.
+2. **Copy the Custom Dashboard YAML:**
+   - Download or copy the YAML file for the custom dashboard from this repository.
 
-3. **Add Custom Card and Dashboard:**
-   - Open Home Assistant and navigate to the `Configuration` → `Lovelace Dashboards`.
+3. **Add the Custom Dashboard to Home Assistant:**
+   - Open Home Assistant and navigate to `Configuration` → `Lovelace Dashboards`.
    - Create a new dashboard or edit an existing one.
-   - Paste the content of the YAML files into the appropriate Lovelace dashboard configuration.
+   - Paste the content of the custom dashboard YAML file into the dashboard configuration editor.
 
 4. **Save and Reload:**
    - Save your configuration and reload your Home Assistant dashboard to see the changes.
