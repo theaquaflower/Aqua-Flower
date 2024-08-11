@@ -1,0 +1,672 @@
+views:
+  - title: Home
+    theme: ios-dark-mode-light-blue-alternative
+    cards:
+      - type: custom:layout-card
+        layout_type: custom:grid-layout
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: entities
+                title: Aqua Flower
+                entities:
+                  - entity: switch.show_schedule_settings
+                    name: Show Schedule Settings
+                card_mod:
+                  style: |
+                    ha-card {
+                    background: transparent;
+                    border-style: none;
+                    text-align: center;
+                    }
+              - type: conditional
+                conditions:
+                  - entity: switch.show_schedule_settings
+                    state: 'on'
+                card:
+                  type: vertical-stack
+                  cards:
+                    - type: entities
+                      entities:
+                        - entity: select.select_zone
+                          name: Select Zone
+                      card_mod:
+                        style: |
+                          ha-card {
+                          background: transparent;
+                          border-style: none;
+                          text-align: center;
+                          }
+                    - type: conditional
+                      conditions:
+                        - entity: select.select_zone
+                          state: All Zones
+                      card:
+                        type: entities
+                        title: All Zones Settings
+                        entities:
+                          - entity: switch.all_zones_scheduled_watering
+                            name: All Zones
+                          - entity: select.all_zones_days
+                            name: All Zones Days
+                          - type: custom:mushroom-number-card
+                            entity: number.all_zones_schedule_start_time
+                            name: All Zones Start Time
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                          - type: custom:mushroom-number-card
+                            entity: number.all_zones_duration
+                            name: All Zones Duration (min)
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    } 
+                        card_mod:
+                          style: |
+                            ha-card {
+                            background: transparent;
+                            border-style: none;
+                            text-align: center;
+                            }                            
+                    - type: conditional
+                      conditions:
+                        - entity: select.select_zone
+                          state: Zone 1
+                      card:
+                        type: entities
+                        title: Zone 1 Settings
+                        entities:
+                          - entity: switch.zone_1_scheduled_watering
+                            name: Zone 1
+                          - entity: select.zone_1_days
+                            name: Zone 1 Days
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_1_schedule_start_time
+                            name: Zone 1 Start Time
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_1_duration
+                            name: Zone 1 Duration (min)
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                        card_mod:
+                          style: |
+                            ha-card {
+                            background: transparent;
+                            border-style: none;
+                            text-align: center;
+                            }                            
+                    - type: conditional
+                      conditions:
+                        - entity: select.select_zone
+                          state: Zone 2
+                      card:
+                        type: entities
+                        title: Zone 2 Settings
+                        entities:
+                          - entity: switch.zone_2_scheduled_watering
+                            name: Zone 2
+                          - entity: select.zone_2_days
+                            name: Zone 2 Days
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_2_schedule_start_time
+                            name: Zone 2 Start Time
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_2_duration
+                            name: Zone 2 Duration (min)
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    } 
+                        card_mod:
+                          style: |
+                            ha-card {
+                            background: transparent;
+                            border-style: none;
+                            text-align: center;
+                            }                            
+                    - type: conditional
+                      conditions:
+                        - entity: select.select_zone
+                          state: Zone 3
+                      card:
+                        type: entities
+                        title: Zone 3 Settings
+                        entities:
+                          - entity: switch.zone_3_scheduled_watering
+                            name: Zone 3
+                          - entity: select.zone_3_days
+                            name: Zone 3 Days
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_3_schedule_start_time
+                            name: Zone 3 Start Time
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_3_duration
+                            name: Zone 3 Duration (min)
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    } 
+                        card_mod:
+                          style: |
+                            ha-card {
+                            background: transparent;
+                            border-style: none;
+                            text-align: center;
+                            }                            
+                    - type: conditional
+                      conditions:
+                        - entity: select.select_zone
+                          state: Zone 4
+                      card:
+                        type: entities
+                        title: Zone 4 Settings
+                        entities:
+                          - entity: switch.zone_4_scheduled_watering
+                            name: Zone 4
+                          - entity: select.zone_4_days
+                            name: Zone 4 Days
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_4_schedule_start_time
+                            name: Zone 4 Start Time
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_4_duration
+                            name: Zone 4 Duration (min)
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    } 
+                        card_mod:
+                          style: |
+                            ha-card {
+                            background: transparent;
+                            border-style: none;
+                            text-align: center;
+                            }                            
+                    - type: conditional
+                      conditions:
+                        - entity: select.select_zone
+                          state: Zone 5
+                      card:
+                        type: entities
+                        title: Zone 5 Settings
+                        entities:
+                          - entity: switch.zone_5_scheduled_watering
+                            name: Zone 5
+                          - entity: select.zone_5_days
+                            name: Zone 5 Days
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_5_schedule_start_time
+                            name: Zone 5 Start Time
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_5_duration
+                            name: Zone 5 Duration (min)
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                        card_mod:
+                          style: |
+                            ha-card {
+                            background: transparent;
+                            border-style: none;
+                            text-align: center;
+                            }                            
+                    - type: conditional
+                      conditions:
+                        - entity: select.select_zone
+                          state: Zone 6
+                      card:
+                        type: entities
+                        title: Zone 6 Settings
+                        entities:
+                          - entity: switch.zone_6_scheduled_watering
+                            name: Zone 6
+                          - entity: select.zone_6_days
+                            name: Zone 6 Days
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_6_schedule_start_time
+                            name: Zone 6 Start Time
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }
+                          - type: custom:mushroom-number-card
+                            entity: number.zone_6_duration
+                            name: Zone 6 Duration (min)
+                            icon_color: white
+                            icon_type: none
+                            card_mod:
+                              style: |
+                                ha-card { background: transparent;  
+                                border-style: none;
+                                text-align:  center; 
+                                color: white;
+                                    }                    
+                        card_mod:
+                          style: |
+                            ha-card {
+                            background: transparent;
+                            border-style: none;
+                            text-align: center;
+                            }
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: transparent;
+                  border-style: none;
+                  text-align: center;
+                }
+            cards:
+              - type: vertical-stack
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    icon_height: 40px
+                    type: button
+                    tap_action:
+                      action: toggle
+                    entity: switch.all_zones_switch
+                    show_state: false
+                    name: All Zones
+                    icon: mdi:pipe-valve
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: transparent;
+                          border-style: none;
+                          text-align: center;
+                        }
+                  - type: custom:mushroom-number-card
+                    entity: number.all_zones_timer
+                    name: All Zones Timer
+                    icon: mdi:timer
+                    icon_color: white
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: transparent;
+                          border-style: none;
+                          text-align: center;
+                        }
+                  - type: grid
+                    columns: 2
+                    square: false
+                    cards:
+                      - type: custom:stack-in-card
+                        card_mod:
+                          style: |
+                            ha-card {
+                              background: transparent;
+                              border-style: none;
+                              text-align: center;
+                            }
+                        cards:
+                          - type: vertical-stack
+                            cards:
+                              - show_name: true
+                                show_icon: true
+                                icon_height: 40px
+                                type: button
+                                tap_action:
+                                  action: toggle
+                                entity: switch.zone_1
+                                show_state: false
+                                name: Zone 1
+                                icon: mdi:pipe-valve
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                              - type: custom:mushroom-number-card
+                                entity: number.zone_1_timer
+                                icon: mdi:timer
+                                icon_color: white
+                              - type: sensor
+                                graph: line
+                                detail: 1
+                                hours_to_show: 168
+                                entity: sensor.zone_1_on_time
+                                name: Zone 1 On Time
+                                icon: mdi:timer-outline
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                      - type: custom:stack-in-card
+                        card_mod:
+                          style: |
+                            ha-card {
+                              background: transparent;
+                              border-style: none;
+                              text-align: center;
+                            }
+                        cards:
+                          - type: vertical-stack
+                            cards:
+                              - show_name: true
+                                show_icon: true
+                                icon_height: 40px
+                                type: button
+                                tap_action:
+                                  action: toggle
+                                entity: switch.zone_2
+                                show_state: false
+                                name: Zone 2
+                                icon: mdi:pipe-valve
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                              - type: custom:mushroom-number-card
+                                entity: number.zone_2_timer
+                                icon: mdi:timer
+                                icon_color: white
+                              - type: sensor
+                                graph: line
+                                detail: 1
+                                hours_to_show: 168
+                                entity: sensor.zone_2_on_time
+                                name: Zone 2 On Time
+                                icon: mdi:timer-outline
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                      - type: custom:stack-in-card
+                        card_mod:
+                          style: |
+                            ha-card {
+                              background: transparent;
+                              border-style: none;
+                              text-align: center;
+                            }
+                        cards:
+                          - type: vertical-stack
+                            cards:
+                              - show_name: true
+                                show_icon: true
+                                icon_height: 40px
+                                type: button
+                                tap_action:
+                                  action: toggle
+                                entity: switch.zone_3
+                                show_state: false
+                                name: Zone 3
+                                icon: mdi:pipe-valve
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                              - type: custom:mushroom-number-card
+                                entity: number.zone_3_timer
+                                icon: mdi:timer
+                                icon_color: white
+                              - type: sensor
+                                graph: line
+                                detail: 1
+                                hours_to_show: 168
+                                entity: sensor.zone_3_on_time
+                                name: Zone 3 On Time
+                                icon: mdi:timer-outline
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                      - type: custom:stack-in-card
+                        card_mod:
+                          style: |
+                            ha-card {
+                              background: transparent;
+                              border-style: none;
+                              text-align: center;
+                            }
+                        cards:
+                          - type: vertical-stack
+                            cards:
+                              - show_name: true
+                                show_icon: true
+                                icon_height: 40px
+                                type: button
+                                tap_action:
+                                  action: toggle
+                                entity: switch.zone_4
+                                show_state: false
+                                name: Zone 4
+                                icon: mdi:pipe-valve
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                              - type: custom:mushroom-number-card
+                                entity: number.zone_4_timer
+                                icon: mdi:timer
+                                icon_color: white
+                              - type: sensor
+                                graph: line
+                                detail: 1
+                                hours_to_show: 168
+                                entity: sensor.zone_4_on_time
+                                name: Zone 4 On Time
+                                icon: mdi:timer-outline
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                      - type: custom:stack-in-card
+                        card_mod:
+                          style: |
+                            ha-card {
+                              background: transparent;
+                              border-style: none;
+                              text-align: center;
+                            }
+                        cards:
+                          - type: vertical-stack
+                            cards:
+                              - show_name: true
+                                show_icon: true
+                                icon_height: 40px
+                                type: button
+                                tap_action:
+                                  action: toggle
+                                entity: switch.zone_5
+                                show_state: false
+                                name: Zone 5
+                                icon: mdi:pipe-valve
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                              - type: custom:mushroom-number-card
+                                entity: number.zone_5_timer
+                                icon: mdi:timer
+                                icon_color: white
+                              - type: sensor
+                                graph: line
+                                detail: 1
+                                hours_to_show: 168
+                                entity: sensor.zone_5_on_time
+                                name: Zone 5 On Time
+                                icon: mdi:timer-outline
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                      - type: custom:stack-in-card
+                        card_mod:
+                          style: |
+                            ha-card {
+                              background: transparent;
+                              border-style: none;
+                              text-align: center;
+                            }
+                        cards:
+                          - type: vertical-stack
+                            cards:
+                              - show_name: true
+                                show_icon: true
+                                icon_height: 40px
+                                type: button
+                                tap_action:
+                                  action: toggle
+                                entity: switch.zone_6
+                                show_state: false
+                                name: Zone 6
+                                icon: mdi:pipe-valve
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+                              - type: custom:mushroom-number-card
+                                entity: number.zone_6_timer
+                                icon: mdi:timer
+                                icon_color: white
+                              - type: sensor
+                                graph: line
+                                detail: 1
+                                hours_to_show: 168
+                                entity: sensor.zone_6_on_time
+                                name: Zone 6 On Time
+                                icon: mdi:timer-outline
+                                card_mod:
+                                  style: |
+                                    ha-card {
+                                      background: transparent;
+                                      border-style: none;
+                                    }
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.zone_1_on_time
+              - entity: sensor.zone_2_on_time
+              - entity: sensor.zone_3_on_time
+              - entity: sensor.zone_4_on_time
+              - entity: sensor.zone_5_on_time
+              - entity: sensor.zone_6_on_time
+            card_mod:
+              style: |
+                ha-card {
+                background: transparent;
+                border-style: none;
+                text-align: center;
+                }
+            hours_to_show: 168
+            line_width: 5
+            legend: true
+            points_per_hour: 0.0417
+            decimals: 0
+            lower_bound: 0
+            show:
+              labels_secondary: true
+              labels: true
